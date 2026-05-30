@@ -1,2 +1,6 @@
 numpy==2.4.2
 Pillow==12.1.1
+opencv-python==4.13.0.92
+# Optional, opt-in only (NOT installed by default): rembg
+#   The --engine rembg cutout path downloads an ML model on first run.
+#   Install it yourself if you accept that:  pip install rembg

@@ -62,6 +62,14 @@ python editor.py
   (Ctrl+Z/Y), live separation preview, subject placement (move + scale) on a
   background, and 0–100 sliders throughout. → [docs](docs/studio.md)
 
+## Use it as an agent skill
+
+A bundled **Agent Skill** in [`skills/magic-eye/`](skills/magic-eye/) lets an AI
+agent (Claude Code / Claude.ai) resolve, create, and verify Magic Eye images using
+the CLI tools — it bundles the scripts and teaches when and how to use them. Point
+your agent at the folder, or install `skills/magic-eye/` into your skills
+directory. See [skills/magic-eye/SKILL.md](skills/magic-eye/SKILL.md).
+
 ## Documentation
 
 - [docs/resolver.md](docs/resolver.md) — recovering depth from a Magic Eye

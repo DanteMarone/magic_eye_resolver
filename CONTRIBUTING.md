@@ -31,3 +31,15 @@ Rules:
 | `docs/creator.md` | Generating a Magic Eye; carriers; performance |
 | `docs/depth-maps.md` | Photo cutout, subject shapes, painting your own depth |
 | `docs/studio.md` | The interactive studio (`editor.py`), step by step |
+
+## Keep the bundled agent skill in sync
+
+`skills/magic-eye/` is a portable Agent Skill that keeps its **own copies** of the
+CLI scripts (`scripts/resolver.py`, `scripts/creator.py`, `scripts/depthmap.py`) so
+it runs without the repo. Because they are copies, they can drift:
+
+- When you change `resolver.py`, `creator.py`, or `depthmap.py` at the repo root,
+  **refresh the matching copy** under `skills/magic-eye/scripts/` in the same change.
+- When you change a tool's behaviour or flags, also update `skills/magic-eye/SKILL.md`
+  and the relevant `skills/magic-eye/references/*.md` — the skill is documentation
+  too, and the same mandate applies.
